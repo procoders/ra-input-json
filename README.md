@@ -1,4 +1,4 @@
-# <JSONEditor> and <JSONEView>
+# JSONEditor and JSONEView for React Admin
 
 JSON edit and view components for [react-admin](https://github.com/marmelab/react-admin) using [JSONInput](https://github.com/AndrewRedican/react-json-editor-ajrm).
 
