@@ -88,11 +88,16 @@ var RaJSONEditor = function (_React$Component) {
           required = _this$props.required,
           rest = _objectWithoutProperties(_this$props, ['source', 'width', 'labelStyle', 'required']);
 
-      return _react2.default.createElement(_TextField2.default, _extends({
-        label: label,
-        error: !!(touched && error),
-        helperText: touched && error
-      }, input, custom));
+      return _react2.default.createElement(_reactJsonEditorAjrm2.default, _extends({
+        id: _lodash2.default + '-outer-box',
+        placeholder: input.value && JSON.parse(input.value) || null,
+        theme: 'light_mitsuketa_tribute',
+        locale: _en2.default,
+        height: '250px',
+        width: '100%',
+        onChange: _this.changeHandler(input.onChange),
+        onKeyPressUpdate: false
+      }, rest));
     }, _this.changeHandler = function (onChange) {
       return function (_ref3) {
         var json = _ref3.json,
