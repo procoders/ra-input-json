@@ -1,6 +1,6 @@
 {
   "name": "ra-input-json",
-  "version": "0.2.7",
+  "version": "0.2.8",
   "description": "JSON edit and view components for react-admin using JSONInput.",
   "main": "dist/index.js",
   "scripts": {
@@ -32,7 +32,6 @@
   "author": "Anton Manuzin",
   "license": "ISC",
   "dependencies": {
-    "@material-ui/core": "^3.9.3",
     "lodash.uniqueid": "^4.0.1",
     "prop-types": "^15.7.2",
     "ra-core": "^2.9.0",
