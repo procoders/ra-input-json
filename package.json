@@ -1,6 +1,6 @@
 {
   "name": "ra-input-json",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "JSON edit and view components for react-admin using JSONInput.",
   "main": "dist/index.js",
   "scripts": {

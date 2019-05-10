@@ -35,6 +35,10 @@ var _Typography = require('@material-ui/core/Typography');
 
 var _Typography2 = _interopRequireDefault(_Typography);
 
+var _TextField = require('@material-ui/core/TextField');
+
+var _TextField2 = _interopRequireDefault(_TextField);
+
 var _defaultProps = require('recompose/defaultProps');
 
 var _defaultProps2 = _interopRequireDefault(_defaultProps);
@@ -71,7 +75,11 @@ var RaJSONEditor = function (_React$Component) {
 
     return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = RaJSONEditor.__proto__ || Object.getPrototypeOf(RaJSONEditor)).call.apply(_ref, [this].concat(args))), _this), _this.renderTextField = function (_ref2) {
       var input = _ref2.input,
-          label = _ref2.label;
+          label = _ref2.label,
+          _ref2$meta = _ref2.meta,
+          touched = _ref2$meta.touched,
+          error = _ref2$meta.error,
+          custom = _objectWithoutProperties(_ref2, ['input', 'label', 'meta']);
 
       var _this$props = _this.props,
           source = _this$props.source,
@@ -80,24 +88,11 @@ var RaJSONEditor = function (_React$Component) {
           required = _this$props.required,
           rest = _objectWithoutProperties(_this$props, ['source', 'width', 'labelStyle', 'required']);
 
-      return _react2.default.createElement(
-        _react2.default.Fragment,
-        null,
-        _react2.default.createElement(
-          _Paper2.default,
-          { style: { width: width || "50%" } },
-          _react2.default.createElement(_reactJsonEditorAjrm2.default, _extends({
-            id: _lodash2.default + '-outer-box',
-            placeholder: input.value && JSON.parse(input.value) || null,
-            theme: 'light_mitsuketa_tribute',
-            locale: _en2.default,
-            height: '250px',
-            width: '100%',
-            onChange: _this.changeHandler(input.onChange),
-            onKeyPressUpdate: false
-          }, rest))
-        )
-      );
+      return _react2.default.createElement(_TextField2.default, _extends({
+        label: label,
+        error: !!(touched && error),
+        helperText: touched && error
+      }, input, custom));
     }, _this.changeHandler = function (onChange) {
       return function (_ref3) {
         var json = _ref3.json,
@@ -142,4 +137,23 @@ RaJSONEditor.propTypes = {
 
 var JSONEView = exports.JSONEView = (0, _defaultProps2.default)({ viewOnly: true })(RaJSONEditor);
 var JSONEditor = exports.JSONEditor = (0, _raCore.addField)(RaJSONEditor);
+
+{/*      <React.Fragment>
+        <Typography component="span" style={labelStyle || {marginTop: "8px", marginBottom: "8px", color: "#919191", fontSize: ".8e", lineHeight: "1em"}}>
+        {label} {required && " *"}
+        </Typography> 
+          <Paper style={{width: width || "50%"}}>
+            <JSONInput
+              id = {`${uniqueId}-outer-box`}
+              placeholder = { (input.value && JSON.parse(input.value)) || null}
+              theme = "light_mitsuketa_tribute"
+              locale = { locale }
+              height = '250px'
+              width="100%"
+              onChange={this.changeHandler(input.onChange)}
+              onKeyPressUpdate={false}
+              {...rest}
+            />
+          </Paper>
+      </React.Fragment>*/}
 //# sourceMappingURL=index.js.map
