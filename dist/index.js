@@ -88,17 +88,31 @@ var RaJSONEditor = function (_React$Component) {
           required = _this$props.required,
           rest = _objectWithoutProperties(_this$props, ['source', 'width', 'labelStyle', 'required']);
 
-      console.log('dsfds');
-      return _react2.default.createElement(_reactJsonEditorAjrm2.default, _extends({
-        id: _lodash2.default + '-outer-box',
-        placeholder: input.value && JSON.parse(input.value) || null,
-        theme: 'light_mitsuketa_tribute',
-        locale: _en2.default,
-        height: '250px',
-        width: '100%',
-        onChange: _this.changeHandler(input.onChange),
-        onKeyPressUpdate: false
-      }, rest));
+      return _react2.default.createElement(
+        _react2.default.Fragment,
+        null,
+        _react2.default.createElement(
+          _Typography2.default,
+          { component: 'span', style: labelStyle || { marginTop: "8px", marginBottom: "8px", color: "#919191", fontSize: ".8e", lineHeight: "1em" } },
+          label,
+          ' ',
+          required && " *"
+        ),
+        _react2.default.createElement(
+          _Paper2.default,
+          { style: { width: width || "50%" } },
+          _react2.default.createElement(_reactJsonEditorAjrm2.default, _extends({
+            id: _lodash2.default + '-outer-box',
+            placeholder: input.value && JSON.parse(input.value) || null,
+            theme: 'light_mitsuketa_tribute',
+            locale: _en2.default,
+            height: '250px',
+            width: '100%',
+            onChange: _this.changeHandler(input.onChange),
+            onKeyPressUpdate: false
+          }, rest))
+        )
+      );
     }, _this.changeHandler = function (onChange) {
       return function (_ref3) {
         var json = _ref3.json,
@@ -143,23 +157,4 @@ RaJSONEditor.propTypes = {
 
 var JSONEView = exports.JSONEView = (0, _defaultProps2.default)({ viewOnly: true })(RaJSONEditor);
 var JSONEditor = exports.JSONEditor = (0, _raCore.addField)(RaJSONEditor);
-
-{/*      <React.Fragment>
-        <Typography component="span" style={labelStyle || {marginTop: "8px", marginBottom: "8px", color: "#919191", fontSize: ".8e", lineHeight: "1em"}}>
-        {label} {required && " *"}
-        </Typography> 
-          <Paper style={{width: width || "50%"}}>
-            <JSONInput
-              id = {`${uniqueId}-outer-box`}
-              placeholder = { (input.value && JSON.parse(input.value)) || null}
-              theme = "light_mitsuketa_tribute"
-              locale = { locale }
-              height = '250px'
-              width="100%"
-              onChange={this.changeHandler(input.onChange)}
-              onKeyPressUpdate={false}
-              {...rest}
-            />
-          </Paper>
-      </React.Fragment>*/}
 //# sourceMappingURL=index.js.map
