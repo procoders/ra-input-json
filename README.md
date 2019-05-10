@@ -1,4 +1,4 @@
-# JSONEditor and JSONEView for React Admin
+# JSONEditor and JSONView for React Admin
 
 [![](https://www.procoders.tech/art/pro-powered.png)](http://procoders.tech/)
 
