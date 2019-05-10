@@ -88,6 +88,7 @@ var RaJSONEditor = function (_React$Component) {
           required = _this$props.required,
           rest = _objectWithoutProperties(_this$props, ['source', 'width', 'labelStyle', 'required']);
 
+      console.log('dsfds');
       return _react2.default.createElement(_reactJsonEditorAjrm2.default, _extends({
         id: _lodash2.default + '-outer-box',
         placeholder: input.value && JSON.parse(input.value) || null,
