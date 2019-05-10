@@ -84,13 +84,6 @@ var RaJSONEditor = function (_React$Component) {
         _react2.default.Fragment,
         null,
         _react2.default.createElement(
-          _Typography2.default,
-          { component: 'span', style: labelStyle || { marginTop: "8px", marginBottom: "8px", color: "#919191", fontSize: ".8e", lineHeight: "1em" } },
-          label,
-          ' ',
-          required && " *"
-        ),
-        _react2.default.createElement(
           _Paper2.default,
           { style: { width: width || "50%" } },
           _react2.default.createElement(_reactJsonEditorAjrm2.default, _extends({
