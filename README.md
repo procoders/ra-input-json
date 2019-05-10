@@ -16,15 +16,13 @@ $ npm i --save ra-input-json
 
 ## Usage
 
-```python
+```javascript
 import { JSONEditor, JSONEView } from 'ra-input-json';
 
-In List component use JSONEView component.
-#Example:
-<JSONEView source="your source name" label="your label name"/>
+// In List component use JSONEView component.
+<JSONEView source="your source name" label="your label name" />
 
-In Form component such as SimpleForm use JSONEditor component.
-#Example:
+// In Form component such as SimpleForm use JSONEditor component.
 <JSONEView source="your source name" label="your label name"/>
 ```
 ## Component Properties
