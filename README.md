@@ -23,7 +23,7 @@ import { JSONEditor, JSONEView } from 'ra-input-json';
 <JSONEView source="your source name" label="your label name" />
 
 // In Form component such as SimpleForm use JSONEditor component.
-<JSONEView source="your source name" label="your label name"/>
+<JSONEditor source="your source name" label="your label name"/>
 ```
 ## Component Properties
 
